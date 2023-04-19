@@ -151,13 +151,17 @@ class BMIActivity : AppCompatActivity() {
             }
         }else{
             if (validateUsUnits()){
-                val usUnitHeightValueFeet : String = binding?.etUsMetricUnitHeightFeet?.text.toString()
+                val usUnitHeightValueFeet : String =
+                    binding?.etUsMetricUnitHeightFeet?.text.toString()
 
-                val usUnitHeightValueInch : String = binding?.etUsMetricUnitHeightInch?.text.toString()
+                val usUnitHeightValueInch : String =
+                    binding?.etUsMetricUnitHeightInch?.text.toString()
 
-                val usUnitWeightValue : Float = binding?.etUsMetricUnitWeight?.text.toString().toFloat()
+                val usUnitWeightValue : Float =
+                    binding?.etUsMetricUnitWeight?.text.toString().toFloat()
 
-                val heightValue = usUnitHeightValueInch.toFloat() + usUnitHeightValueFeet.toFloat() *12
+                val heightValue = usUnitHeightValueInch.toFloat() +
+                        usUnitHeightValueFeet.toFloat() *12
 
                 val bmi = 703 * (usUnitWeightValue / (heightValue * heightValue))
 
